@@ -1,0 +1,74 @@
+users:
+  valid_user:
+    username: "testuser@example.com"
+    password: "password123"
+    email: "testuser@example.com"
+    firstName: "Test"
+    lastName: "User"
+  
+  invalid_user:
+    username: "invalid@example.com"
+    password: "wrongpassword"
+    email: "invalid@example.com"
+    firstName: "Invalid"
+    lastName: "User"
+  
+  admin_user:
+    username: "admin@example.com"
+    password: "admin123"
+    email: "admin@example.com"
+    firstName: "Admin"
+    lastName: "User"
+    role: "admin"
+
+test_data:
+  valid_emails:
+    - "test@example.com"
+    - "user@test.com"
+    - "automation@qa.com"
+  
+  invalid_emails:
+    - "invalid-email"
+    - "@example.com"
+    - "test@"
+    - "test@.com"
+  
+  valid_passwords:
+    - "Password123!"
+    - "TestPass456"
+    - "SecurePass789"
+  
+  invalid_passwords:
+    - "123"
+    - "password"
+    - "PASSWORD"
+    - ""
+
+locations:
+  san_francisco:
+    latitude: 37.7749
+    longitude: -122.4194
+    altitude: 0
+  
+  new_york:
+    latitude: 40.7128
+    longitude: -74.0060
+    altitude: 0
+  
+  london:
+    latitude: 51.5074
+    longitude: -0.1278
+    altitude: 0
+
+devices:
+  android_devices:
+    - "Samsung Galaxy S24"
+    - "Google Pixel 8"
+    - "Samsung Galaxy S23"
+    - "Google Pixel 7"
+  
+  ios_devices:
+    - "iPhone 16 Pro"
+    - "iPhone 15 Pro"
+    - "iPhone 14 Pro"
+    - "iPhone 13 Pro" 

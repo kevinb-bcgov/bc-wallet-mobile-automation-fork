@@ -1,0 +1,86 @@
+platforms:
+  android:
+    local:
+      appium:platformName: "Android"
+      appium:platformVersion: "15"
+      appium:deviceName: "Pixel 8"
+      appium:appPackage: "ca.bc.gov.BCWallet"
+      appium:automationName: "UIAutomator2"
+      appium:autoGrantPermissions: true
+      appium:noReset: false
+      appium:fullReset: true
+      appium:newCommandTimeout: 60
+      appium:app: "apps/BCWallet-2487.apk"
+    saucelabs:
+      platformName: "Android"
+      appium:platformVersion: "14"
+      appium:deviceName: "Google.*"
+      appium:appPackage: "ca.bc.gov.BCWallet"
+      appium:automationName: "UiAutomator2"
+      appium:autoGrantPermissions: true
+      appium:noReset: false
+      appium:fullReset: true
+      appium:unicodeKeyboard: true
+      appium:resetKeyboard: true
+      appium:newCommandTimeout: 60
+      appium:app: "storage:filename=BCWallet-2487.apk"
+      sauce:options:
+        username: "${SAUCE_USERNAME}"
+        accessKey: "${SAUCE_ACCESS_KEY}"
+        build: "Android Build ${new Date().toISOString()}"
+        name: "Android Mobile App Test"
+        appiumVersion: "stable"
+        deviceOrientation: "portrait"
+  ios:
+    local:
+      appium:platformName: "iOS"
+      appium:platformVersion: "18.3"
+      appium:deviceName: "iPhone 16 Pro"
+      appium:automationName: "XCUITest"
+      appium:noReset: false
+      appium:fullReset: true
+      appium:newCommandTimeout: 60
+      appium:autoAcceptAlerts: true
+      appium:autoDismissAlerts: true
+      appium:udid: "E5023A01-3D7D-43BE-B644-92C3CE2E3134"
+      appium:bundleId: "ca.bc.gov.BCWallet"
+      appium:app: "apps/bcwallet-2487.ipa"
+    saucelabs:
+      platformName: "iOS"
+      appium:platformVersion: "16"
+      appium:deviceName: "iPhone.*"
+      appium:automationName: "XCUITest"
+      appium:noReset: false
+      appium:fullReset: true
+      appium:newCommandTimeout: 60
+      appium:autoAcceptAlerts: true
+      appium:autoDismissAlerts: true
+      appium:bundleId: "ca.bc.gov.BCWallet"
+      appium:app: "storage:filename=bcwallet-2487.ipa"
+      sauce:options:
+        username: "${SAUCE_USERNAME}"
+        accessKey: "${SAUCE_ACCESS_KEY}"
+        build: "iOS Build ${new Date().toISOString()}"
+        name: "iOS Mobile App Test"
+        appiumVersion: "stable"
+        deviceOrientation: "portrait"
+
+# Sauce Labs Configuration
+saucelabs:
+  android:
+    username: "${SAUCE_USERNAME}"
+    accessKey: "${SAUCE_ACCESS_KEY}"
+    region: "us-west-1"
+    hostname: "ondemand.us-west-1.saucelabs.com"
+    port: 443
+    protocol: "https"
+    path: "/wd/hub"
+  ios:
+    username: "${SAUCE_USERNAME}"
+    accessKey: "${SAUCE_ACCESS_KEY}"
+    region: "us-west-1"
+    hostname: "ondemand.us-west-1.saucelabs.com"
+    port: 443
+    protocol: "https"
+    path: "/wd/hub"
+  headless: false 
