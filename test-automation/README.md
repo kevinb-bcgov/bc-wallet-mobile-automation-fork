@@ -1,6 +1,6 @@
 # BCGOV-WebdriverIO Test Automation Framework
 
-A WebdriverIO-based test automation framework for mobile app testing with platform-specific locators.
+A WebdriverIO-based test automation framework for BCSC v4.0 iOS and Android mobile app testing.
 
 ## Platform-Specific Locators Strategy
 
