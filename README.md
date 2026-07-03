@@ -4,7 +4,7 @@
 
 # About
 
-BC Wallet to hold Verifiable Credentials
+CURRENTLY ARCHIVED - BC Wallet to hold Verifiable Credentials
 
 # Table of Contents
 <!-- TOC -->
